@@ -1,0 +1,35 @@
+{
+  "name": "testv1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --build tsconfig.json",
+    "build:watch": "tsc --build tsconfig.json --watch",
+    "test": "jest --coverage",
+    "test:watch": "npm run test -- --watchAll",
+    "test-local": "env-cmd -f ./config/.env.local jest --config ./jest.config.json",
+    "lint": "eslint ./src --ext .ts"
+  },
+  "keywords": [],
+  "author": "CharlyBernabe",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/config-conventional": "^17.0.2",
+    "@types/jest": "^28.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "commitlint": "^17.0.2",
+    "eslint": "^8.16.0",
+    "husky": "^8.0.1",
+    "jest": "^28.1.0",
+    "ts-jest": "^28.0.3",
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "commitlint": {
+    "extends": "@commitlint/config-conventional"
+  }
+}
