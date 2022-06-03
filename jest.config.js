@@ -19,4 +19,5 @@ module.exports = {
       tsconfig: "tsconfig.json",
     },
   },
+  "preset": "@shelf/jest-mongodb"
  }
