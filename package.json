@@ -9,25 +9,38 @@
     "test": "jest --coverage",
     "test:watch": "npm run test -- --watchAll",
     "test-local": "env-cmd -f ./config/.env.local jest --config ./jest.config.json",
-    "lint": "eslint ./src --ext .ts"
+    "lint": "eslint ./src --ext .ts",
+    "serve": "nodemon ./src/app.ts",
+    "start": "ts-node-dev ./src/app.ts"
   },
   "keywords": [],
   "author": "CharlyBernabe",
   "license": "ISC",
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.2",
+    "@shelf/jest-mongodb": "^3.0.1",
+    "@types/express": "^4.17.13",
     "@types/jest": "^28.1.0",
+    "@types/mockingoose": "^2.13.0",
+    "@types/mongodb-uri": "^0.9.1",
+    "@types/mongoose": "^5.11.97",
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
     "commitlint": "^17.0.2",
     "eslint": "^8.16.0",
     "husky": "^8.0.1",
     "jest": "^28.1.0",
+    "mockingoose": "^2.15.2",
+    "nodemon": "^2.0.16",
     "ts-jest": "^28.0.3",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^4.7.2"
   },
   "dependencies": {
-    "express": "^4.18.1"
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mongodb-uri": "^0.9.7",
+    "mongoose": "^6.3.5"
   },
   "commitlint": {
     "extends": "@commitlint/config-conventional"
